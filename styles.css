@@ -1,0 +1,58 @@
+:root{--ink:#0f1b2d;--panel:#16263d;--line:#2a3e5c;--txt:#eaf0f8;--mut:#8fa3bf;--gold:#ffc83d;--win:#3ddc97;--lose:#ff6b6b;--paper:#f3efe4;--pt:#1c2433}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--txt);font:500 15px/1.45 Barlow,system-ui,sans-serif}
+h1,h2,.logo,.odd b{font-family:'Barlow Condensed',sans-serif}
+.demo{background:var(--gold);color:#222;text-align:center;font-size:13px;padding:4px 8px;font-weight:600}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 24px;border-bottom:1px solid var(--line)}
+.logo{font-size:38px;font-weight:800;letter-spacing:1px}.logo span{color:var(--gold)}
+.wallet{display:flex;align-items:center;gap:12px}
+.wallet small{display:block;color:var(--mut);font-size:12px}.wallet b{font-size:22px;font-family:'Barlow Condensed'}.wallet em{font-style:normal;color:var(--mut);font-size:12px;margin-left:6px}
+.btn{background:transparent;color:var(--txt);border:1px solid var(--line);border-radius:6px;padding:9px 16px;font:600 15px Barlow;cursor:pointer}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#222}
+.btn:disabled{opacity:.5;cursor:wait}
+.link{background:none;border:0;color:var(--gold);cursor:pointer;font:600 13px Barlow;text-decoration:underline}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main{display:grid;grid-template-columns:1fr 340px;gap:24px;padding:24px;max-width:1200px;margin:auto}
+#tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:16px}
+#tabs button{background:var(--panel);color:var(--mut);border:1px solid var(--line);border-radius:20px;padding:6px 16px;font:600 14px Barlow;cursor:pointer;white-space:nowrap}
+#tabs button.on{background:var(--txt);color:var(--ink)}
+.ev{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:12px}
+.ev .when{color:var(--mut);font-size:13px;margin-bottom:8px}
+.teams{display:flex;justify-content:space-between;font:800 22px 'Barlow Condensed';margin-bottom:10px;gap:8px}
+.teams span{display:flex;align-items:center;gap:8px}.teams img{width:26px;height:26px;object-fit:contain}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.odd{background:var(--ink);border:1px solid var(--line);color:var(--txt);border-radius:6px;padding:8px;cursor:pointer;font:500 13px Barlow;display:flex;justify-content:space-between;align-items:center}
+.odd b{font-size:20px;color:var(--gold)}
+.odd.on{background:var(--gold);border-color:var(--gold);color:#222}.odd.on b{color:#222}
+.ticket{background:var(--paper);color:var(--pt);border-radius:8px;padding:18px;margin-bottom:16px;position:relative;border-bottom:3px dashed #b9b19a}
+.ticket h2{font-size:24px;letter-spacing:1px}
+.ticket .pick{margin:8px 0;font-weight:600}
+.ticket label,.card label{display:block;font-size:13px;font-weight:600;margin-top:10px}
+input,select{width:100%;margin-top:4px;padding:9px;border:1px solid #bbb;border-radius:6px;font:500 15px Barlow}
+.ticket .win{margin:10px 0;display:flex;justify-content:space-between;font-weight:600}.ticket .win b{font:800 22px 'Barlow Condensed'}
+.ticket .btn{width:100%;background:var(--pt);color:#fff;border:0}
+.ticket p.empty{color:#6b6a62}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:16px}
+.box h2{font-size:20px;margin-bottom:8px}.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.item{border-top:1px solid var(--line);padding:8px 0;font-size:14px;display:flex;justify-content:space-between;gap:8px}
+.item small{color:var(--mut);display:block}
+.pend{color:var(--gold)}.won,.in{color:var(--win)}.lost,.out{color:var(--lose)}
+.muted{color:var(--mut)}
+footer{color:var(--mut);font-size:12px;text-align:center;padding:24px}
+.modal{position:fixed;inset:0;background:rgba(5,10,20,.8);display:flex;align-items:center;justify-content:center;padding:16px;z-index:10}
+.modal[hidden]{display:none}
+.card{background:var(--paper);color:var(--pt);border-radius:10px;padding:22px;width:100%;max-width:420px;max-height:92vh;overflow:auto}
+.card h2{font-size:26px}.card p{margin:8px 0 14px}.card .btn{border-color:#aaa;color:var(--pt)}.card .btn.gold{color:#222;border-color:var(--gold)}
+.card .row{margin-top:16px}.card .row .btn{flex:1}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:14px}
+.seg button{padding:9px;border:0;background:#e2dccb;font:800 18px 'Barlow Condensed';cursor:pointer;border-radius:6px;color:var(--pt)}
+.seg button.on{background:var(--pt);color:#fff}
+.methods{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.methods button{padding:10px;border:2px solid #d5cfbd;border-radius:6px;background:#fff;font:600 14px Barlow;cursor:pointer;color:var(--pt)}
+.methods button.on{border-color:var(--pt)}
+.chips{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.chips button{border:1px solid #bbb;background:#fff;border-radius:14px;padding:3px 10px;cursor:pointer;font:600 13px Barlow}
+.note{font-size:12.5px;color:#6b6a62}
+#toasts{position:fixed;bottom:16px;right:16px;display:grid;gap:8px;z-index:20}
+.toast{background:var(--win);color:#06281a;padding:10px 14px;border-radius:6px;font-weight:600;max-width:320px}.toast.err{background:var(--lose);color:#310}
+@media(max-width:860px){main{grid-template-columns:1fr;padding:14px}header{padding:12px 14px}}
+@media(prefers-reduced-motion:no-preference){.toast{animation:in .25s}@keyframes in{from{transform:translateY(8px);opacity:0}}}
